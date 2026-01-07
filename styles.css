@@ -1,0 +1,241 @@
+:root {
+  --primary: #5a739d;
+  --accent: #d9b7cf;
+  --text: #2f3b52;
+  --muted: #5c6a85;
+  --paper: #f7f8fb;
+  --ink: #2f3b52;
+  --max-width: 520px;
+  font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    linear-gradient(120deg, rgba(234, 184, 208, 0.1), rgba(108, 165, 235, 0.1)),
+    url("fondos decorativos/Captura de pantalla 2026-01-06 005817.png");
+  background-size: cover, 800px;
+  background-repeat: no-repeat, repeat;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  padding: 12px 0 28px;
+}
+.page {
+  width: 100%;
+  max-width: var(--max-width);
+  padding: 14px 14px 48px;
+}
+.hero {
+  border-radius: 28px;
+  padding: 20px 18px 26px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(108,165,235,0.14), transparent 50%),
+    radial-gradient(circle at 85% 10%, rgba(234,184,208,0.16), transparent 50%),
+    rgba(255,255,255,0.7);
+  border: 1px solid rgba(90,115,157,0.12);
+}
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.hero::before {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.45), transparent 60%),
+    url("fondos decorativos/6d42d57f1f62e3023e174e1c748abd70 (1).jpg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 220px;
+  opacity: 0.38;
+}
+.hero::after {
+  background:
+    linear-gradient(0deg, rgba(255,255,255,0.35), transparent 60%),
+    url("fondos decorativos/il_340x270.2700027571_hhuc.avif");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 230px;
+  opacity: 0.35;
+}
+.hero__top { display: flex; justify-content: flex-end; position: relative; z-index: 1; }
+.hero__title { text-align: center; position: relative; z-index: 1; }
+.hero__crest {
+  width: 140px;
+  height: 80px;
+  margin: 0 auto 6px;
+  background: url("fondos decorativos/il_570xN.1699409108_2lnm.avif") center/contain no-repeat;
+  opacity: 0.7;
+  position: relative;
+  z-index: 1;
+}
+.hero__subtitle {
+  color: var(--muted);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 4px 0;
+}
+.hero h1 {
+  margin: 0 0 6px;
+  font-size: 36px;
+  color: var(--primary);
+  font-family: "Great Vibes", "Brush Script MT", cursive;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+}
+.countdown {
+  margin-top: 10px;
+  padding: 12px 10px 10px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(90,115,157,0.12);
+}
+.countdown__label { text-align: center; margin: 0 0 6px; color: var(--primary); letter-spacing: 0.12em; font-size: 12px; text-transform: uppercase; }
+.countdown__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; text-align: center; }
+.countdown__item {
+  background: rgba(244, 247, 251, 0.8);
+  border-radius: 12px;
+  padding: 8px 6px;
+  border: 1px solid rgba(90,115,157,0.08);
+}
+.countdown__item span { display: block; font-size: 20px; color: var(--primary); font-weight: 700; }
+.countdown__item small { color: var(--muted); }
+.countdown__status { text-align: center; margin: 8px 0 0; color: var(--muted); font-size: 13px; }
+.hero__scroll { margin-top: 12px; text-align: center; color: var(--muted); font-size: 13px; letter-spacing: 0.08em; }
+
+main { margin-top: 16px; display: flex; flex-direction: column; gap: 18px; }
+.card {
+  position: relative;
+  padding: 18px 12px 10px;
+  background: rgba(255,255,255,0.46);
+  border-radius: 22px;
+  border: 1px solid rgba(90,115,157,0.08);
+}
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(150deg, rgba(234,184,208,0.12), transparent 60%);
+  opacity: 0.45;
+  pointer-events: none;
+  border-radius: 22px;
+}
+.card--rsvp::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("fondos decorativos/il_340x270.2700027571_hhuc.avif") no-repeat 8% 12%;
+  background-size: 180px;
+  opacity: 0.18;
+  pointer-events: none;
+  border-radius: 22px;
+}
+.card:not(:first-of-type)::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 10px;
+  background: radial-gradient(circle, rgba(90,115,157,0.22) 0%, transparent 60%);
+  opacity: 0.7;
+  pointer-events: none;
+}
+.card h2, .card h3 {
+  margin: 0 0 8px;
+  color: var(--primary);
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.card p { margin: 6px 0; line-height: 1.55; color: var(--text); }
+.card--message { text-align: center; }
+.card--message p { color: var(--muted); }
+.card--data .data-grid { display: grid; gap: 12px; }
+.card--message,
+.card--dress {
+  background: transparent;
+  border: none;
+  padding-top: 6px;
+}
+.card--message::before,
+.card--dress::before {
+  display: none;
+}
+.card--message::after,
+.card--dress::after {
+  display: none;
+}
+.label { color: var(--muted); font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; margin: 0; }
+.value { margin: 2px 0 0; font-weight: 600; color: var(--ink); }
+.btn {
+  background: linear-gradient(135deg, rgba(90,115,157,0.92), rgba(90,115,157,0.82));
+  color: #fff;
+  border: 1px solid rgba(90,115,157,0.25);
+  border-radius: 16px;
+  padding: 12px 16px;
+  font-weight: 700;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 0 10px 26px rgba(90,115,157,0.18);
+  letter-spacing: 0.02em;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+}
+.btn:disabled { opacity: 0.55; cursor: not-allowed; }
+.btn.ghost {
+  background: rgba(255,255,255,0.5);
+  color: var(--primary);
+  border: 1px solid rgba(90,115,157,0.18);
+  width: auto;
+  padding: 8px 12px;
+  box-shadow: none;
+}
+.card--dress { text-align: center; }
+.dress-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 14px 0; }
+.icon {
+  font-size: 22px;
+  display: block;
+  background: rgba(90,115,157,0.08);
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  border-radius: 50%;
+  margin: 0 auto 6px;
+}
+.note { color: var(--muted); font-size: 13px; margin-top: 4px; }
+.card--rsvp { text-align: center; }
+.tiara {
+  width: 96px;
+  height: 60px;
+  margin: 0 auto 6px;
+  background: url("fondos decorativos/pngtree-blue-tiara-drawing-in-watercolor-png-image_6126781.png") center/contain no-repeat;
+  opacity: 0.75;
+}
+.hint { color: var(--muted); font-size: 12px; margin-top: 8px; }
+.card--music { display: flex; flex-direction: column; gap: 10px; }
+.music-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.music-head .btn.ghost {
+  min-width: 56px;
+  min-height: 56px;
+  border-radius: 16px;
+  font-size: 22px;
+  line-height: 1;
+  padding: 0 16px;
+}
+.progress { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; font-size: 12px; color: var(--muted); }
+.progress-bar { height: 8px; background: rgba(90,115,157,0.08); border-radius: 6px; overflow: hidden; }
+#progress-fill { background: linear-gradient(90deg, var(--accent), var(--primary)); height: 100%; width: 0%; }
+@media (min-width: 520px) {
+  body { background-attachment: fixed; }
+  .page { padding: 24px 24px 60px; }
+  .card { padding: 20px 18px 12px; }
+}

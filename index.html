@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación | Zayda Nicole 15</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero__top">
+        <button class="btn ghost" id="btn-confirm-top">Confirmar</button>
+      </div>
+      <div class="hero__crest" aria-hidden="true"></div>
+      <div class="hero__title">
+        <p class="hero__subtitle">Mis 15 años</p>
+        <h1>Zayda Nicole</h1>
+      </div>
+      <div class="countdown" id="countdown">
+        <p class="countdown__label">Faltan</p>
+        <div class="countdown__grid">
+          <div class="countdown__item"><span id="cd-days">--</span><small>días</small></div>
+          <div class="countdown__item"><span id="cd-hours">--</span><small>horas</small></div>
+          <div class="countdown__item"><span id="cd-mins">--</span><small>min</small></div>
+          <div class="countdown__item"><span id="cd-secs">--</span><small>seg</small></div>
+        </div>
+        <p class="countdown__status" id="countdown-status"></p>
+      </div>
+      <div class="hero__scroll">Desliza hacia abajo</div>
+    </header>
+
+    <main>
+      <section class="card card--music card--music-top">
+        <div class="music-head">
+          <div>
+            <p class="label">Canción</p>
+            <p class="value">Mi sexy chambelán</p>
+            <p class="label">Colibritany</p>
+          </div>
+          <button class="btn ghost" id="btn-play">⏵</button>
+        </div>
+        <audio id="audio" loop>
+          <source src="assets/mi-sexy-chambelan.mp3" type="audio/mpeg">
+          Tu navegador no soporta audio.
+        </audio>
+        <div class="progress">
+          <span id="audio-time">00:00</span>
+          <div class="progress-bar"><div id="progress-fill"></div></div>
+          <span id="audio-duration">00:00</span>
+        </div>
+        <p class="hint">Toca en cualquier parte para iniciar la música.</p>
+      </section>
+
+      <section class="card card--message">
+        <h2>Mis XV años</h2>
+        <p>Con la bendición de Dios y el amor de mi familia, me siento feliz de llegar a este momento. Hoy dejo atrás mi infancia y comienzo un nuevo viaje con metas que cumplir.</p>
+        <p>Agradezco a quienes me han acompañado y deseo compartir esta noche contigo.</p>
+      </section>
+
+      <section class="card card--data">
+        <h3>Detalles</h3>
+        <div class="data-grid">
+          <div>
+            <p class="label">Fecha</p>
+            <p class="value">17 de enero, 10:00 p.m.</p>
+          </div>
+          <div>
+            <p class="label">Lugar</p>
+            <p class="value">Calle los membrillos MZ 3 lote 7 Previ Callao</p>
+            <a class="btn ghost" id="btn-location" href="https://maps.app.goo.gl/R1UuTKNxFCwtty3x9" target="_blank" rel="noreferrer">Ubicación</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="card card--dress">
+        <h3>Dress Code</h3>
+        <p class="label">Sport casual</p>
+        <div class="dress-grid">
+          <div><span class="icon">👔</span><small>Chicos</small></div>
+          <div><span class="icon">👠</span><small>Chicas</small></div>
+          <div><span class="icon">🎁</span><small>Todos</small></div>
+        </div>
+        <p class="note">Se reserva el color turquesa y plateado para la quinceañera.</p>
+      </section>
+
+      <section class="card card--rsvp">
+        <div class="tiara" aria-hidden="true"></div>
+        <h3>Confirmación</h3>
+        <p>Tu presencia hará este día más especial.</p>
+        <button class="btn" id="btn-confirm">Confirmar por WhatsApp</button>
+        <p class="hint">Toca el botón y envía tu confirmación.</p>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
